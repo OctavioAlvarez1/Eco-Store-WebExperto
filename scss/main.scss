@@ -1,12 +1,26 @@
 // VARIABLES
 $primary-color: #FFEFE7;
-$secondary-color: #FFDAC6;
-$tertiary-color: #fafdcf;
+$secondary-color: #fce4d7;
+$tertiary-color: #fefeed;
 $primary-text-color:#7C6A0A;
 $quaternion-color: #FA9500;
 $font-stack: 'Poppins', sans-serif; 
 $paragraph-size: 1.5em;
 
+@mixin flexCenter($direction, $content, $align){
+		display: flex;
+		flex-direction: $direction;
+		justify-content: $content;
+		align-items: $align;
+
+}
+
+@mixin buttonStyle(){
+		button{
+				background: none;
+				border-style: none;
+		}
+}
 
 body{
     margin: 0;
@@ -16,11 +30,11 @@ body{
 //NAVBAR
 nav{
     width: auto;
+		@include flexCenter(row,space-between ,center );
     padding: 15px;
     background-color: $tertiary-color;
     font-family: $font-stack;
     display: flex;
-    justify-content: space-between;
     color: $primary-text-color;
     p{
         font-size: $paragraph-size;
@@ -29,10 +43,7 @@ nav{
     .icons{
         display: flex;
         gap: 15px;
-        button{
-            background:none;
-            border-style: none;
-        }
+				@include buttonStyle();
     }
 }
 
@@ -40,16 +51,15 @@ nav{
 article{
 		width: auto;
     color: $primary-text-color;
+		@include flexCenter(row,space-around ,center );
 		background-color: $tertiary-color;
 		display: flex;
-		justify-content: space-around;
 		padding-left: 45px;
 		padding-right: 45px;
 		padding-top: 70px;
 
 		.impact-section{
-				display: flex;
-				flex-direction: column;
+				@include flexCenter(column,space-evenly ,flex-start );
 				padding-top: 50px;
 				gap: 25px;
 		}
@@ -65,8 +75,9 @@ article{
 				font-family: $font-stack;
 
 		}
+		@include buttonStyle();
 		button{
-			
+
 				padding: 20px;
 				width: 12vw;
 				border-style: none;
@@ -74,6 +85,9 @@ article{
 				border-radius: 35px;
 				color: white;
 				font-size: 1em;
+				&:hover{
+					transform: scale(1.1);
+				}
 		}
 		img{
 				width: 25vw;
@@ -85,7 +99,7 @@ article{
 section{
 		width: auto;
 		height: auto;
-		background-color: pink;
+		background-color: $tertiary-color;
 		padding: 60px;
 	h2{
 			color:$primary-text-color;
@@ -95,25 +109,28 @@ section{
 	.healthcare{
 			padding-bottom: 60px;
 			h2{
+					font-family: $font-stack;
 					font-weight: 300;
-					padding-bottom: 60px;
+					padding-top: 40px;
+					padding-bottom: 40px;
 			}
 			.card-section{
-					display: flex;
+					@include flexCenter(row,space-between ,center );
 					width: auto;
 					height: auto;
-					justify-content: center;
 					flex-wrap: wrap;
-					align-items: center;
 					column-gap: 100px;
 					row-gap: 80px;
 					.product-card{
-							width: 20vw;
-							height: 40vh;
+							width:18vw;
+							height: 50vh;
 							background-color: $secondary-color;
 							color: $primary-text-color;
 							padding: 20px;
 							border-radius: 8px;
+							h3,p{
+									font-family: $font-stack;
+							}
 							.icon{
 									width: 100%;
 									height: auto;
@@ -149,14 +166,89 @@ section{
 		.furniture{
 				@extend .healthcare;
 				.product-card{
-						background-color: $tertiary-color;
+						background-color:red;
 						color: white;
 				}
 		}
 }
 
 
+//ABOUT US
+.about-us{
+		padding-bottom: 60px;
+		h2{
+				font-weight: bold;
+				padding-bottom: 60px;
+		}
+		.mission-section{
+				@include flexCenter(row,space-evenly ,center );
+				.earth{
+						width: 34vw;
+						display: flex;
+						gap: 40px;
+						background-color: $tertiary-color;
+						color: #f29667;
+						font-family: $font-stack;
+						font-size: 1em;
+						img{
+								object-fit: contain;
+						}
+						p{
+								text-align: center;
+								font-size: $paragraph-size;
+						}
+				}
+		}
+		.innovation{
+				@extend .earth;
+		}
+}
 
+//GALLERY
+.gallery{
+		h2{
+			font-weight: bold;
+			padding-bottom: 60px;
+		}
+		margin: 60px;
+		.gallery-images{
+				@include flexCenter(row,space-around ,center );
+				img{
+						width: 27vw;
+						height: 45vh;
+						object-fit: cover;
+						object-position: 20px 30%;
+						border-radius: 16px;
+						&:hover{
+								transform: scale(1.1);
+						}
+				}
+		}
+}
+
+//LOCATION
+.location{
+		color:#E86424;
+		h2{
+			
+				padding-bottom: 40px;
+				padding-top: 40px
+		}
+		.map{
+				@include flexCenter(row,center,center );
+				padding-bottom: 50px;
+				img{
+						width: 70vw;
+						height: 70vh;
+				}
+		}
+		h3{
+				font-size: $paragraph-size;
+		}
+		p{
+				font-size: $paragraph-size;
+		}
+}
 
 // FOOTER
 
@@ -164,5 +256,12 @@ footer{
     $background: $quaternion-color;
     background-color: $background;
     width: 100%;
-    height: 250px;
+    height: auto;
+		padding: 40px;
+		color: white;
+		.social-media{
+				@include flexCenter(row,center,center );
+				gap: 40px;
+				padding-bottom: 40px;
+		}
 }

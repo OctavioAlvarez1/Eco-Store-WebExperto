@@ -5,11 +5,14 @@ body {
 
 nav {
   width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px;
-  background-color: #fafdcf;
+  background-color: #fefeed;
   font-family: "Poppins", sans-serif;
   display: flex;
-  justify-content: space-between;
   color: #7C6A0A;
 }
 nav p {
@@ -28,9 +31,12 @@ nav .icons button {
 article {
   width: auto;
   color: #7C6A0A;
-  background-color: #fafdcf;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  background-color: #fefeed;
+  display: flex;
   padding-left: 45px;
   padding-right: 45px;
   padding-top: 70px;
@@ -38,6 +44,8 @@ article {
 article .impact-section {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
   padding-top: 50px;
   gap: 25px;
 }
@@ -52,6 +60,10 @@ article p {
   font-family: "Poppins", sans-serif;
 }
 article button {
+  background: none;
+  border-style: none;
+}
+article button {
   padding: 20px;
   width: 12vw;
   border-style: none;
@@ -59,6 +71,9 @@ article button {
   border-radius: 35px;
   color: white;
   font-size: 1em;
+}
+article button:hover {
+  transform: scale(1.1);
 }
 article img {
   width: 25vw;
@@ -68,7 +83,7 @@ article img {
 section {
   width: auto;
   height: auto;
-  background-color: pink;
+  background-color: #fefeed;
   padding: 60px;
 }
 section h2 {
@@ -80,27 +95,33 @@ section .healthcare, section .furniture {
   padding-bottom: 60px;
 }
 section .healthcare h2, section .furniture h2 {
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 section .healthcare .card-section, section .furniture .card-section {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: auto;
   height: auto;
-  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
   -moz-column-gap: 100px;
        column-gap: 100px;
   row-gap: 80px;
 }
 section .healthcare .card-section .product-card, section .furniture .card-section .product-card {
-  width: 20vw;
-  height: 40vh;
-  background-color: #FFDAC6;
+  width: 18vw;
+  height: 50vh;
+  background-color: #fce4d7;
   color: #7C6A0A;
   padding: 20px;
   border-radius: 8px;
+}
+section .healthcare .card-section .product-card h3, section .furniture .card-section .product-card h3, section .healthcare .card-section .product-card p, section .furniture .card-section .product-card p {
+  font-family: "Poppins", sans-serif;
 }
 section .healthcare .card-section .product-card .icon, section .furniture .card-section .product-card .icon {
   width: 100%;
@@ -128,12 +149,103 @@ section .healthcare .card-section .product-card .product-image img, section .fur
   border-radius: 6px;
 }
 section .furniture .product-card {
-  background-color: #fafdcf;
+  background-color: red;
   color: white;
+}
+
+.about-us {
+  padding-bottom: 60px;
+}
+.about-us h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.about-us .mission-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-us .mission-section .earth, .about-us .mission-section .innovation {
+  width: 34vw;
+  display: flex;
+  gap: 40px;
+  background-color: #fefeed;
+  color: #f29667;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+}
+.about-us .mission-section .earth img, .about-us .mission-section .innovation img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about-us .mission-section .earth p, .about-us .mission-section .innovation p {
+  text-align: center;
+  font-size: 1.5em;
+}
+.gallery {
+  margin: 60px;
+}
+.gallery h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.gallery .gallery-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.gallery .gallery-images img {
+  width: 27vw;
+  height: 45vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20px 30%;
+     object-position: 20px 30%;
+  border-radius: 16px;
+}
+.gallery .gallery-images img:hover {
+  transform: scale(1.1);
+}
+
+.location {
+  color: #E86424;
+}
+.location h2 {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.location .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.location .map img {
+  width: 70vw;
+  height: 70vh;
+}
+.location h3 {
+  font-size: 1.5em;
+}
+.location p {
+  font-size: 1.5em;
 }
 
 footer {
   background-color: #FA9500;
   width: 100%;
-  height: 250px;
+  height: auto;
+  padding: 40px;
+  color: white;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 40px;
 }/*# sourceMappingURL=main.css.map */
