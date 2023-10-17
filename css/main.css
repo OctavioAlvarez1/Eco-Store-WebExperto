@@ -115,7 +115,7 @@ section .healthcare .card-section, section .furniture .card-section {
 section .healthcare .card-section .product-card, section .furniture .card-section .product-card {
   width: 18vw;
   height: 50vh;
-  background-color: #fce4d7;
+  background-color: #f8e4c3;
   color: #7C6A0A;
   padding: 20px;
   border-radius: 8px;
@@ -210,6 +210,7 @@ section .furniture .product-card {
 }
 
 .location {
+  font-family: "Poppins", sans-serif;
   color: #E86424;
 }
 .location h2 {
@@ -235,6 +236,7 @@ section .furniture .product-card {
 }
 
 footer {
+  font-family: "Poppins", sans-serif;
   background-color: #FA9500;
   width: 100%;
   height: auto;
@@ -247,5 +249,4 @@ footer .social-media {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  padding-bottom: 40px;
 }/*# sourceMappingURL=main.css.map */

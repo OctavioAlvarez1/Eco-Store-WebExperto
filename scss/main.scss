@@ -1,6 +1,6 @@
 // VARIABLES
 $primary-color: #FFEFE7;
-$secondary-color: #fce4d7;
+$secondary-color: #f8e4c3;
 $tertiary-color: #fefeed;
 $primary-text-color:#7C6A0A;
 $quaternion-color: #FA9500;
@@ -228,6 +228,7 @@ section{
 
 //LOCATION
 .location{
+		font-family: $font-stack;
 		color:#E86424;
 		h2{
 			
@@ -253,6 +254,7 @@ section{
 // FOOTER
 
 footer{
+		font-family: $font-stack;
     $background: $quaternion-color;
     background-color: $background;
     width: 100%;
@@ -262,6 +264,6 @@ footer{
 		.social-media{
 				@include flexCenter(row,center,center );
 				gap: 40px;
-				padding-bottom: 40px;
+				padding
 		}
 }
